@@ -1,7 +1,12 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { loadGames } from "./actions/gamesaction";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(()=> dispatch(loadGames()));
   return (
+
     <div className="App">
       <h1>HEllo ignite! </h1>
     </div>
@@ -9,3 +14,4 @@ function App() {
 }
 
 export default App;
+ 

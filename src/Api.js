@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 // Base URl
 
+const apikey = '4242b7d0d9d9421bb2c8773d78e01459';
 const base_url = 'https://api.rawg.io/api/';
 
 //Getting the month
@@ -42,8 +43,8 @@ const lastYear = `${currentYear-1}-${currentMonth}-${currentDay}`;
 const NextYear = `${currentYear+1}-${currentMonth}-${currentDay}`;
 
 //Popular Games
-const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
+const popular_games = `games?key=${apikey}&dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
 
-const popularGamesURL = ()=> `${base_url}${popular_games}`;
+export const popularGamesURL = ()=> `${base_url}${popular_games}`;
 
-console.log(popularGamesURL());
+//console.log(popularGamesURL()); 
