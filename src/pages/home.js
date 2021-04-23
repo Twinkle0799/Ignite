@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
 
+
 const Home = () => {
     //Fetch Games
     const dispatch = useDispatch();
