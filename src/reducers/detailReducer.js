@@ -7,7 +7,7 @@ const DetailReducer = (state=initialState,action)=>{
             return{
                 ...state,
                 game:action.payload.game,
-                screen:action.payload.screen,
+                screen:action.payload.screen
             }
         default:
             return { ...state}

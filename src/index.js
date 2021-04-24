@@ -4,11 +4,15 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
 //REDUX Setup
 import {createStore ,applyMiddleware,compose} from 'redux';
 import rootReducer from './reducers';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+
+
+require('dotenv').config();
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer,composeEnhancer(applyMiddleware(thunk)) );

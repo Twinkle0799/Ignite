@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // Base URl
 
-const apikey = '4242b7d0d9d9421bb2c8773d78e01459';
+const apikey = process.env.REACT_APP_API_KEY;
 const base_url = 'https://api.rawg.io/api/';
 
 //Getting the month
@@ -52,7 +52,7 @@ export const upcomingGamesURL = ()=> `${base_url}${upcoming_games}`;
 export const newGamesURL = () => `${base_url}${new_games}`;
 
 //Game details
-export const gameDetailURL = (game_id) => `${base_url}games?key=${apikey}&/${game_id}`;
+export const gameDetailURL = (game_id) => `${base_url}games/${game_id}?key=${apikey}`;
 
 //game ss
 export const gameScreenShotURL = (game_id) => `${base_url}games?key=${apikey}&/${game_id}/screenshots`;
