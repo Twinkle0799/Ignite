@@ -1,4 +1,4 @@
-const initialState = { game: {},screen:{} };
+const initialState = { game: {platforms:[]},screen:{results:[]} };
 
 const DetailReducer = (state=initialState,action)=>{
     switch(action.type)
